@@ -107,6 +107,13 @@
 
 				for(var i = 0; i < this.scripts_list[type].length; i++) {
 
+					//if script name don't have extension, adding default file extension to name
+					if ( this.scripts_list[type][i].indexOf('.') == -1 ) {
+
+						this.scripts_list[type][i] += this.options.file_extension;
+
+					};
+
 					//key of script_list object matches the directory name
 					var path = type + '/' + this.scripts_list[type][i];
 
